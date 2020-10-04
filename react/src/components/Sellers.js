@@ -27,7 +27,7 @@ export default function Sellers() {
 const SellerLists = (props) => {
     return(
         <Fragment>
-            <div className="bg-white col-sm-5 col-md-4 col-lg-2 p-3 m-2 border d-flex flex-column rounded">
+            <div className="bg-white col-sm-5 col-md-5 col-lg-3 p-3 m-2 border d-flex flex-column rounded">
                 <img src={User} className="img-fluid fish" alt=""/>
                 
                 <div className="row my-2 d-flex flex-column align-items-center justify-content-start">
