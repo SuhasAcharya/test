@@ -28,6 +28,7 @@ export default function Fishes() {
 
 
 const FishList = (props) => {
+    console.log(props)
     return(
         <Fragment>
             <div className="bg-white col-sm-5 col-md-4 col-lg-2 p-3 m-2 border d-flex flex-column rounded">
@@ -61,13 +62,12 @@ const FishList = (props) => {
             </div>
             <div className="sf-lightgrey py-5 col-sm-12 d-flex justify-content-center align-items-center">
                 <div className="col-sm-12 col-md-9 d-flex flex-wrap">
-                    <FishList name="Mackerel" price="100"/>
-                    <FishList name="Kingfish" price="130"/>
-                    <FishList name="Ladyfish" price="80"/>
-                    <FishList name="Pomfret" price="200"/>
-                    <FishList name="Pearlspot" price="230"/>
-                    <FishList name="Catfish" price="170"/>
-                    <FishList name="Stingray" price="210"/>
+                    {
+                        data.map(fishes=>{  
+                            return(<FishList name={fishes.fish_name} price="100"/>);                   
+                        })
+                    }
+
                 </div>
             </div>
         </Fragment>
