@@ -17,11 +17,13 @@ app.get('/user/:googleId/:userName', async (req, res) => {
     if (userDetail) {
       result.user_name = userDetail.user_name;
       result.google_id = userDetail.google_id;
+      result.user_id = userDetail.user_id;
     } else {
       let data = await userLib.createUser({google_id: googleId ,user_name: userName});
       console.log(data)
       result.user_name = data.user_name;
       result.google_id = data.google_id;
+      result.user_id = data.user_id;
     }
     res.send(result);
 });
